@@ -1,7 +1,6 @@
 package cascadia.aaron.hidenseek1;
 
 import cascadia.aaron.hidenseek1.util.SystemUiHider;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
@@ -9,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.*;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -53,7 +53,16 @@ public class Home extends Activity {
 
 		final View controlsView = findViewById(R.id.fullscreen_content_controls);
 		final View contentView = findViewById(R.id.fullscreen_content);
-
+		final Button button1 = (Button) findViewById(R.id.button1);
+		final TextView textView1 = (TextView) findViewById(R.id.textView1);
+		
+		button1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				textView1.setText("The text got changed!");
+			}
+		});
+		
 		// Set up an instance of SystemUiHider to control the system UI for
 		// this activity.
 		mSystemUiHider = SystemUiHider.getInstance(this, contentView,

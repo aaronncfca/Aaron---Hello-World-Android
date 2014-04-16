@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="#134"
     tools:context="cascadia.aaron.hidenseek1.Home" >
 
     <!--
@@ -11,23 +11,41 @@
          TextureView, etc.
     -->
 
-    <TextView
+    <LinearLayout
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:orientation="vertical"
         android:keepScreenOn="true"
         android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
+        android:textColor="#FFF"
         android:textSize="50sp"
-        android:textStyle="bold" />
+        android:textStyle="bold">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Hello World!"
+            android:textSize="@dimen/message_text_size" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Button" />
+
+        </LinearLayout>
 
     <!--
          This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows.
     -->
 
-    <FrameLayout
+   <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true" >
@@ -50,12 +68,6 @@
                 android:layout_weight="1"
                 android:text="@string/dummy_button" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
 
     </FrameLayout>
 
