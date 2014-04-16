@@ -53,13 +53,22 @@ public class Home extends Activity {
 
 		final View controlsView = findViewById(R.id.fullscreen_content_controls);
 		final View contentView = findViewById(R.id.fullscreen_content);
-		final Button button1 = (Button) findViewById(R.id.button1);
+		final Button btnRename = (Button) findViewById(R.id.btnRename);
+		final Button btnReset = (Button) findViewById(R.id.btnReset);
 		final TextView textView1 = (TextView) findViewById(R.id.textView1);
+		final EditText fname = (EditText) findViewById(R.id.inputFName);
+		final EditText lname = (EditText) findViewById(R.id.inputLName);
 		
-		button1.setOnClickListener(new View.OnClickListener() {
+		
+		btnRename.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				textView1.setText("The text got changed!");
+				String text = "Hello, "
+								+ fname.getText().toString()
+								+ ' '
+								+ lname.getText().toString()
+								+ '!';
+				textView1.setText(text);
 			}
 		});
 		
