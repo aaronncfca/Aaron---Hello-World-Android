@@ -11,77 +11,6 @@
          TextureView, etc.
     -->
 
-    <LinearLayout
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#FFF"
-        android:textSize="50sp"
-        android:textStyle="bold">
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="Hello World!"
-            android:textSize="@dimen/message_text_size" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="First Name"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <EditText
-            android:id="@+id/inputFName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10" />
-
-        <TextView
-            android:id="@+id/TextView01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="Last Name"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <EditText
-            android:id="@+id/inputLName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10" >
-
-            <requestFocus />
-        </EditText>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <Button
-                android:id="@+id/btnRename"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Greet By Name" />
-
-            <Button
-                android:id="@+id/btnReset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reset Greeting" />
-
-        </LinearLayout>
-
-        </LinearLayout>
-
     <!--
          This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows.
@@ -92,24 +21,71 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true" >
 
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?metaButtonBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent" >
+       <LinearLayout
+           android:id="@+id/fullscreen_content"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:keepScreenOn="true"
+           android:orientation="vertical"
+           android:text="@string/dummy_content"
+           android:textColor="#FFF"
+           android:textSize="50sp"
+           android:textStyle="bold" >
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
-        </LinearLayout>
+           <TextView
+               android:id="@+id/textView1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="left"
+               android:text="Hello World!"
+               android:textSize="@dimen/message_text_size" />
+
+           <TextView
+               android:id="@+id/textView2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="left"
+               android:text="First Name"
+               android:textAppearance="?android:attr/textAppearanceSmall" />
+
+           <EditText
+               android:id="@+id/inputFName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10" />
+
+           <TextView
+               android:id="@+id/TextView01"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="left"
+               android:text="Last Name"
+               android:textAppearance="?android:attr/textAppearanceSmall" />
+
+           <EditText
+               android:id="@+id/inputLName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" >
+
+               <Button
+                   android:id="@+id/btnRename"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Greet By Name" />
+
+               <Button
+                   android:id="@+id/btnReset"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Reset Greeting" />
+           </LinearLayout>
+       </LinearLayout>
 
     </FrameLayout>
 
